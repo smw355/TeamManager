@@ -1,0 +1,51 @@
+✅ Structured Practice Management Mock Backend running on http://localhost:8000
+📖 Health check: http://localhost:8000/health
+🔐 Login endpoint: http://localhost:8000/api/auth/login
+👥 Roster endpoint: http://localhost:8000/api/roster/team1/players
+🏃 Practice Activities endpoint: http://localhost:8000/api/practice-activities
+📋 Practice Plans endpoint: http://localhost:8000/api/practice-plans/team/team1
+📅 Scheduled Practices endpoint: http://localhost:8000/api/scheduled-practices/team/team1
+🗓️ Events endpoint: http://localhost:8000/api/events/team/team1
+👥 Team endpoints: http://localhost:8000/api/users/{userId}/teams
+📊 Sample data loaded:
+   - 2 users
+   - 2 teams
+   - 4 team memberships
+   - 6 practice activities
+   - 2 practice plans
+   - 2 scheduled practices
+   - 4 events
+GET /health
+(node:89088) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+GET /api/users/user1/teams
+GET /api/auth/me
+GET /api/auth/me
+GET /api/users/user1/teams
+GET /api/users/user1/teams
+GET /api/events/team/team1
+GET /api/roster/team1/players
+GET /api/events/team/team1
+GET /api/roster/team1/players
+GET /api/auth/me
+GET /api/auth/me
+GET /api/auth/me
+GET /api/auth/me
+GET /api/events/team/team1
+GET /api/users/user1/teams
+GET /api/events/team/team1
+GET /api/users/user1/teams
+GET /api/users/user1/teams
+GET /api/practice-plans/team/team1
+GET /api/users/user1/teams
+GET /api/practice-plans/team/team1
+GET /api/events/team/team1
+GET /api/roster/team1/players
+GET /api/events/team/team1
+GET /api/roster/team1/players
+GET /api/events/team/team1
+GET /api/events/team/team1
+GET /api/practice-plans/team/team1
+GET /api/practice-plans/team/team1
+GET /api/events/team/team1
+GET /api/roster/team1/players
