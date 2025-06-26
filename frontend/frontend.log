@@ -10535,3 +10535,125 @@ TS2551: Property 'caregiver_user' does not exist on type 'PlayerRelationship'. D
     237 |                                   {relationship.is_primary && (
     238 |                                     <span className="text-xs text-blue-600 font-medium">Primary</span>
 
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Roster.tsx:235:51
+TS2551: Property 'caregiver_user' does not exist on type 'PlayerRelationship'. Did you mean 'caregiver_user_id'?
+    233 |                                   </span>
+    234 |                                   <span className="text-sm text-gray-700">
+  > 235 |                                     {relationship.caregiver_user?.name}
+        |                                                   ^^^^^^^^^^^^^^
+    236 |                                   </span>
+    237 |                                   {relationship.is_primary && (
+    238 |                                     <span className="text-xs text-blue-600 font-medium">Primary</span>
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Roster.tsx:73:37
+TS18047: 'currentTeam' is possibly 'null'.
+    71 |
+    72 |     try {
+  > 73 |       await ApiService.deletePlayer(currentTeam.id, playerId);
+       |                                     ^^^^^^^^^^^
+    74 |       await loadData();
+    75 |     } catch (err) {
+    76 |       setError('Failed to delete player');
+

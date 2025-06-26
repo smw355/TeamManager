@@ -70,8 +70,8 @@ const Roster: React.FC = () => {
     }
 
     try {
-      await ApiService.deletePlayer('team1', playerId);
-      await loadPlayers();
+      await ApiService.deletePlayer(currentTeam.id, playerId);
+      await loadData();
     } catch (err) {
       setError('Failed to delete player');
       console.error('Error deleting player:', err);

@@ -51,6 +51,9 @@ export interface PlayerRelationship {
   can_pickup: boolean;         // Authorization for pickup
   created_at: string;
   updated_at: string;
+  // Populated by API when requested
+  player_user?: User;          // Player user details
+  caregiver_user?: User;       // Caregiver user details
 }
 
 export interface Player {
