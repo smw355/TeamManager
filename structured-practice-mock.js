@@ -22,6 +22,24 @@ let users = [
     phone: '+1-555-0124',
     created_at: '2025-06-24T10:00:00Z',
     updated_at: '2025-06-24T10:00:00Z'
+  },
+  {
+    id: 'user3',
+    email: 'parent@example.com',
+    name: 'Michelle Williams',
+    avatar: null,
+    phone: '+1-555-0125',
+    created_at: '2025-06-24T10:00:00Z',
+    updated_at: '2025-06-24T10:00:00Z'
+  },
+  {
+    id: 'user4',
+    email: 'player@example.com',
+    name: 'Sam Williams',
+    avatar: null,
+    phone: '+1-555-0126',
+    created_at: '2025-06-24T10:00:00Z',
+    updated_at: '2025-06-24T10:00:00Z'
   }
 ];
 
@@ -88,6 +106,50 @@ let userTeamMemberships = [
     player_id: null,
     created_at: '2025-06-24T10:00:00Z',
     updated_at: '2025-06-24T10:00:00Z'
+  },
+  {
+    id: 'membership5',
+    user_id: 'user3',
+    team_id: 'team1',
+    role: 'player_contact',
+    player_id: null, // Will be linked via PlayerRelationship
+    created_at: '2025-06-24T10:00:00Z',
+    updated_at: '2025-06-24T10:00:00Z'
+  },
+  {
+    id: 'membership6',
+    user_id: 'user4',
+    team_id: 'team1',
+    role: 'player',
+    player_id: '2', // Links to Sam Williams player record
+    created_at: '2025-06-24T10:00:00Z',
+    updated_at: '2025-06-24T10:00:00Z'
+  }
+];
+
+// Player Relationships
+let playerRelationships = [
+  {
+    id: 'rel1',
+    player_user_id: 'user1', // Demo User is also a player
+    caregiver_user_id: 'user3',
+    team_id: 'team1',
+    relationship_type: 'parent',
+    is_primary: true,
+    can_pickup: true,
+    created_at: '2025-06-24T10:00:00Z',
+    updated_at: '2025-06-24T10:00:00Z'
+  },
+  {
+    id: 'rel2',
+    player_user_id: 'user4', // Player user
+    caregiver_user_id: 'user3',
+    team_id: 'team1',
+    relationship_type: 'parent',
+    is_primary: true,
+    can_pickup: true,
+    created_at: '2025-06-24T10:00:00Z',
+    updated_at: '2025-06-24T10:00:00Z'
   }
 ];
 
@@ -97,6 +159,7 @@ let players = [
     name: 'Alex Johnson',
     number: 10,
     position: 'Forward',
+    user_id: 'user1', // Links to Demo User
     team_id: 'team1',
     birth_date: '2010-05-15',
     emergency_contact: 'parent@example.com'
@@ -106,6 +169,7 @@ let players = [
     name: 'Sam Williams',
     number: 7,
     position: 'Midfielder',
+    user_id: 'user4', // Links to player user account
     team_id: 'team1',
     birth_date: '2011-03-22',
     emergency_contact: 'parent2@example.com'
@@ -463,7 +527,23 @@ const server = http.createServer((req, res) => {
     handleGetUserTeams(req, res, pathname);
   } else if (req.method === 'POST' && pathname === '/api/teams') {
     handleCreateTeam(req, res);
-  } else if (req.method === 'GET' && pathname.match(/^\/api\/teams\/(.+)$/)) {
+  }
+  
+  // Player Relationship endpoints (must come before generic team endpoints)
+  else if (req.method === 'GET' && pathname.match(/^\/api\/teams\/(.+)\/relationships$/)) {
+    handleGetTeamRelationships(req, res, pathname);
+  } else if (req.method === 'POST' && pathname === '/api/relationships') {
+    handleCreatePlayerRelationship(req, res);
+  } else if (req.method === 'PUT' && pathname.match(/^\/api\/relationships\/(.+)$/)) {
+    handleUpdatePlayerRelationship(req, res, pathname);
+  } else if (req.method === 'DELETE' && pathname.match(/^\/api\/relationships\/(.+)$/)) {
+    handleDeletePlayerRelationship(req, res, pathname);
+  } else if (req.method === 'GET' && pathname.match(/^\/api\/users\/search/)) {
+    handleSearchUsers(req, res, pathname);
+  }
+  
+  // Generic team endpoints (must come after specific team sub-routes)
+  else if (req.method === 'GET' && pathname.match(/^\/api\/teams\/(.+)$/)) {
     handleGetTeam(req, res, pathname);
   } else if (req.method === 'PUT' && pathname.match(/^\/api\/teams\/(.+)$/)) {
     handleUpdateTeam(req, res, pathname);
@@ -1238,6 +1318,115 @@ function handleDeleteTeam(req, res, pathname) {
   res.end(JSON.stringify({ success: true, message: 'Team deleted' }));
 }
 
+// Player Relationship handlers
+function handleGetTeamRelationships(req, res, pathname) {
+  const teamId = pathname.split('/')[3];
+  const teamRelationships = playerRelationships.filter(r => r.team_id === teamId);
+  
+  // Populate with user details
+  const relationshipsWithUsers = teamRelationships.map(rel => {
+    const player = users.find(u => u.id === rel.player_user_id);
+    const caregiver = users.find(u => u.id === rel.caregiver_user_id);
+    return {
+      ...rel,
+      player_user: player,
+      caregiver_user: caregiver
+    };
+  });
+  
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify(relationshipsWithUsers));
+}
+
+function handleCreatePlayerRelationship(req, res) {
+  let body = '';
+  req.on('data', chunk => { body += chunk.toString(); });
+  req.on('end', () => {
+    try {
+      const relationshipData = JSON.parse(body);
+      const newRelationship = {
+        id: `rel${Date.now()}`,
+        ...relationshipData,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      };
+      
+      playerRelationships.push(newRelationship);
+      
+      res.writeHead(201, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(newRelationship));
+    } catch (error) {
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: false, error: { message: 'Invalid JSON' } }));
+    }
+  });
+}
+
+function handleUpdatePlayerRelationship(req, res, pathname) {
+  let body = '';
+  req.on('data', chunk => { body += chunk.toString(); });
+  req.on('end', () => {
+    try {
+      const relationshipId = pathname.split('/')[3];
+      const relationshipData = JSON.parse(body);
+      const relationshipIndex = playerRelationships.findIndex(r => r.id === relationshipId);
+      
+      if (relationshipIndex === -1) {
+        res.writeHead(404, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: false, error: { message: 'Relationship not found' } }));
+        return;
+      }
+      
+      playerRelationships[relationshipIndex] = {
+        ...playerRelationships[relationshipIndex],
+        ...relationshipData,
+        updated_at: new Date().toISOString()
+      };
+      
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(playerRelationships[relationshipIndex]));
+    } catch (error) {
+      res.writeHead(400, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: false, error: { message: 'Invalid JSON' } }));
+    }
+  });
+}
+
+function handleDeletePlayerRelationship(req, res, pathname) {
+  const relationshipId = pathname.split('/')[3];
+  const relationshipIndex = playerRelationships.findIndex(r => r.id === relationshipId);
+  
+  if (relationshipIndex === -1) {
+    res.writeHead(404, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: false, error: { message: 'Relationship not found' } }));
+    return;
+  }
+  
+  playerRelationships.splice(relationshipIndex, 1);
+  
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ success: true, message: 'Relationship deleted' }));
+}
+
+function handleSearchUsers(req, res, pathname) {
+  const url = new URL(`http://localhost${pathname}${req.url.includes('?') ? req.url.substring(req.url.indexOf('?')) : ''}`);
+  const query = url.searchParams.get('q');
+  
+  if (!query) {
+    res.writeHead(400, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: false, error: { message: 'Query parameter q is required' } }));
+    return;
+  }
+  
+  const searchResults = users.filter(user => 
+    user.name.toLowerCase().includes(query.toLowerCase()) ||
+    user.email.toLowerCase().includes(query.toLowerCase())
+  );
+  
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify(searchResults));
+}
+
 const PORT = 8000;
 server.listen(PORT, () => {
   console.log(`✅ Structured Practice Management Mock Backend running on http://localhost:${PORT}`);
@@ -1253,6 +1442,7 @@ server.listen(PORT, () => {
   console.log(`   - ${users.length} users`);
   console.log(`   - ${teams.length} teams`);
   console.log(`   - ${userTeamMemberships.length} team memberships`);
+  console.log(`   - ${playerRelationships.length} player relationships`);
   console.log(`   - ${practiceActivities.length} practice activities`);
   console.log(`   - ${practicePlans.length} practice plans`);
   console.log(`   - ${scheduledPractices.length} scheduled practices`);

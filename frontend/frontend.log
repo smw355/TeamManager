@@ -9884,3 +9884,654 @@ src/contexts/TeamContext.tsx
 
 webpack compiled with 1 warning
 No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used            @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 12:18:  'PlayerRelationship' is defined but never used       @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 16:10:  'useTeam' is defined but never used                  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used            @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 12:18:  'PlayerRelationship' is defined but never used       @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 16:10:  'useTeam' is defined but never used                  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                              @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                   @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 19:11:  'currentTeam' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:46:  'teamLoading' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:66:  'teamError' is assigned a value but never used                         @typescript-eslint/no-unused-vars
+  Line 21:10:  'relationships' is assigned a value but never used                     @typescript-eslint/no-unused-vars
+  Line 21:25:  'setRelationships' is assigned a value but never used                  @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 25:35:  'setIsRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 27:41:  'setSelectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                              @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                   @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 19:11:  'currentTeam' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:46:  'teamLoading' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:66:  'teamError' is assigned a value but never used                         @typescript-eslint/no-unused-vars
+  Line 21:10:  'relationships' is assigned a value but never used                     @typescript-eslint/no-unused-vars
+  Line 21:25:  'setRelationships' is assigned a value but never used                  @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 25:35:  'setIsRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 27:41:  'setSelectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                              @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                   @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:46:  'teamLoading' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:66:  'teamError' is assigned a value but never used                         @typescript-eslint/no-unused-vars
+  Line 21:10:  'relationships' is assigned a value but never used                     @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 25:35:  'setIsRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 27:41:  'setSelectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                              @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                   @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                    @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:46:  'teamLoading' is assigned a value but never used                       @typescript-eslint/no-unused-vars
+  Line 19:66:  'teamError' is assigned a value but never used                         @typescript-eslint/no-unused-vars
+  Line 21:10:  'relationships' is assigned a value but never used                     @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 25:35:  'setIsRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  Line 27:41:  'setSelectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Roster.tsx:74:13
+TS2304: Cannot find name 'loadPlayers'.
+    72 |     try {
+    73 |       await ApiService.deletePlayer('team1', playerId);
+  > 74 |       await loadPlayers();
+       |             ^^^^^^^^^^^
+    75 |     } catch (err) {
+    76 |       setError('Failed to delete player');
+    77 |       console.error('Error deleting player:', err);
+
+ERROR in src/pages/Roster.tsx:84:5
+TS2304: Cannot find name 'loadPlayers'.
+    82 |     setIsModalOpen(false);
+    83 |     setEditingPlayer(null);
+  > 84 |     loadPlayers();
+       |     ^^^^^^^^^^^
+    85 |   };
+    86 |
+    87 |   const getPositionColor = (position: string) => {
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 19:46:  'teamLoading' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 19:66:  'teamError' is assigned a value but never used                      @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 87:9:   'handleAddRelationship' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 92:9:   'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 98:9:   'getPlayerRelationships' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 102:9:  'getRelationshipColor' is assigned a value but never used           @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 19:46:  'teamLoading' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 19:66:  'teamError' is assigned a value but never used                      @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 87:9:   'handleAddRelationship' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 92:9:   'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 98:9:   'getPlayerRelationships' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 102:9:  'getRelationshipColor' is assigned a value but never used           @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Roster.tsx:74:13
+TS2304: Cannot find name 'loadPlayers'.
+    72 |     try {
+    73 |       await ApiService.deletePlayer('team1', playerId);
+  > 74 |       await loadPlayers();
+       |             ^^^^^^^^^^^
+    75 |     } catch (err) {
+    76 |       setError('Failed to delete player');
+    77 |       console.error('Error deleting player:', err);
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 87:9:   'handleAddRelationship' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 92:9:   'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 98:9:   'getPlayerRelationships' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 102:9:  'getRelationshipColor' is assigned a value but never used           @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 87:9:   'handleAddRelationship' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 92:9:   'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 98:9:   'getPlayerRelationships' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 102:9:  'getRelationshipColor' is assigned a value but never used           @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Roster.tsx:74:13
+TS2304: Cannot find name 'loadPlayers'.
+    72 |     try {
+    73 |       await ApiService.deletePlayer('team1', playerId);
+  > 74 |       await loadPlayers();
+       |             ^^^^^^^^^^^
+    75 |     } catch (err) {
+    76 |       setError('Failed to delete player');
+    77 |       console.error('Error deleting player:', err);
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 87:9:   'handleAddRelationship' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 92:9:   'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 98:9:   'getPlayerRelationships' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 102:9:  'getRelationshipColor' is assigned a value but never used           @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:    'UserGroupIcon' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:3:   'LinkIcon' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 19:24:  'currentRole' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 87:9:   'handleAddRelationship' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 92:9:   'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 98:9:   'getPlayerRelationships' is assigned a value but never used         @typescript-eslint/no-unused-vars
+  Line 102:9:  'getRelationshipColor' is assigned a value but never used           @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Roster.tsx:74:13
+TS2304: Cannot find name 'loadPlayers'.
+    72 |     try {
+    73 |       await ApiService.deletePlayer('team1', playerId);
+  > 74 |       await loadPlayers();
+       |             ^^^^^^^^^^^
+    75 |     } catch (err) {
+    76 |       setError('Failed to delete player');
+    77 |       console.error('Error deleting player:', err);
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:     'UserGroupIcon' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:3:    'LinkIcon' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 15:8:    'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 19:24:   'currentRole' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 25:10:   'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:   'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 87:9:    'handleAddRelationship' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 92:9:    'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 102:9:   'getRelationshipColor' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 199:27:  'playerRelationships' is assigned a value but never used            @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 9:3:     'UserGroupIcon' is defined but never used                           @typescript-eslint/no-unused-vars
+  Line 10:3:    'LinkIcon' is defined but never used                                @typescript-eslint/no-unused-vars
+  Line 15:8:    'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 19:24:   'currentRole' is assigned a value but never used                    @typescript-eslint/no-unused-vars
+  Line 25:10:   'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:   'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 87:9:    'handleAddRelationship' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  Line 92:9:    'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 102:9:   'getRelationshipColor' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  Line 199:27:  'playerRelationships' is assigned a value but never used            @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Roster.tsx:74:13
+TS2304: Cannot find name 'loadPlayers'.
+    72 |     try {
+    73 |       await ApiService.deletePlayer('team1', playerId);
+  > 74 |       await loadPlayers();
+       |             ^^^^^^^^^^^
+    75 |     } catch (err) {
+    76 |       setError('Failed to delete player');
+    77 |       console.error('Error deleting player:', err);
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 92:9:   'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Roster.tsx
+  Line 15:8:   'PlayerRelationshipModal' is defined but never used                 @typescript-eslint/no-unused-vars
+  Line 25:10:  'isRelationshipModalOpen' is assigned a value but never used        @typescript-eslint/no-unused-vars
+  Line 27:10:  'selectedPlayerForRelationship' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 92:9:   'handleRelationshipSaved' is assigned a value but never used        @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Roster.tsx:74:13
+TS2304: Cannot find name 'loadPlayers'.
+    72 |     try {
+    73 |       await ApiService.deletePlayer('team1', playerId);
+  > 74 |       await loadPlayers();
+       |             ^^^^^^^^^^^
+    75 |     } catch (err) {
+    76 |       setError('Failed to delete player');
+    77 |       console.error('Error deleting player:', err);
+
+ERROR in src/pages/Roster.tsx:235:51
+TS2551: Property 'caregiver_user' does not exist on type 'PlayerRelationship'. Did you mean 'caregiver_user_id'?
+    233 |                                   </span>
+    234 |                                   <span className="text-sm text-gray-700">
+  > 235 |                                     {relationship.caregiver_user?.name}
+        |                                                   ^^^^^^^^^^^^^^
+    236 |                                   </span>
+    237 |                                   {relationship.is_primary && (
+    238 |                                     <span className="text-xs text-blue-600 font-medium">Primary</span>
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Roster.tsx:74:13
+TS2304: Cannot find name 'loadPlayers'.
+    72 |     try {
+    73 |       await ApiService.deletePlayer('team1', playerId);
+  > 74 |       await loadPlayers();
+       |             ^^^^^^^^^^^
+    75 |     } catch (err) {
+    76 |       setError('Failed to delete player');
+    77 |       console.error('Error deleting player:', err);
+
+ERROR in src/pages/Roster.tsx:235:51
+TS2551: Property 'caregiver_user' does not exist on type 'PlayerRelationship'. Did you mean 'caregiver_user_id'?
+    233 |                                   </span>
+    234 |                                   <span className="text-sm text-gray-700">
+  > 235 |                                     {relationship.caregiver_user?.name}
+        |                                                   ^^^^^^^^^^^^^^
+    236 |                                   </span>
+    237 |                                   {relationship.is_primary && (
+    238 |                                     <span className="text-xs text-blue-600 font-medium">Primary</span>
+

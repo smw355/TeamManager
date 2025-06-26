@@ -41,17 +41,31 @@ export interface TeamWithMembership extends Team {
 // Legacy type for backward compatibility
 export type UserRole = TeamRole;
 
+export interface PlayerRelationship {
+  id: string;
+  player_user_id: string;      // User who has 'player' role
+  caregiver_user_id: string;   // User who has 'player_contact' role  
+  team_id: string;             // Relationship is team-specific
+  relationship_type: 'parent' | 'guardian' | 'emergency_contact' | 'other';
+  is_primary: boolean;         // One primary contact per player
+  can_pickup: boolean;         // Authorization for pickup
+  created_at: string;
+  updated_at: string;
+}
+
 export interface Player {
   id: string;
   name: string;
   number?: number;
   position?: string;
-  parent_ids?: string[];
+  user_id?: string;            // Link to User account (if player is also a user)
   team_id: string;
   birth_date?: string;
   emergency_contact?: string;
   created_at?: string;
-  // Computed properties for compatibility
+  relationships?: PlayerRelationship[]; // Populated when needed
+  // Legacy properties for backward compatibility
+  parent_ids?: string[];
   parentIds?: string[];
   teamId?: string;
   birthDate?: string;

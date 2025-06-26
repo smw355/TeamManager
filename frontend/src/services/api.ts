@@ -268,6 +268,35 @@ class ApiService {
     });
   }
 
+  // Player Relationship endpoints
+  async getTeamRelationships(teamId: string) {
+    return this.request<any[]>(`/teams/${teamId}/relationships`);
+  }
+
+  async createPlayerRelationship(relationshipData: any) {
+    return this.request<any>('/relationships', {
+      method: 'POST',
+      body: JSON.stringify(relationshipData),
+    });
+  }
+
+  async updatePlayerRelationship(relationshipId: string, relationshipData: any) {
+    return this.request<any>(`/relationships/${relationshipId}`, {
+      method: 'PUT',
+      body: JSON.stringify(relationshipData),
+    });
+  }
+
+  async deletePlayerRelationship(relationshipId: string) {
+    return this.request<{ success: boolean; message: string }>(`/relationships/${relationshipId}`, {
+      method: 'DELETE',
+    });
+  }
+
+  async searchUsers(query: string) {
+    return this.request<any[]>(`/users/search?q=${encodeURIComponent(query)}`);
+  }
+
   async getTeam(teamId: string) {
     return this.request<any>(`/teams/${teamId}`);
   }

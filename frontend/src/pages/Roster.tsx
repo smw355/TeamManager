@@ -5,32 +5,50 @@ import {
   TrashIcon,
   UserIcon,
   PhoneIcon,
-  CalendarIcon
+  CalendarIcon,
+  UserGroupIcon,
+  LinkIcon
 } from '@heroicons/react/24/outline';
-import { Player } from '../types';
+import { Player, PlayerRelationship } from '../types';
 import ApiService from '../services/api';
 import PlayerModal from '../components/PlayerModal';
+import PlayerRelationshipModal from '../components/PlayerRelationshipModal';
+import { useTeam } from '../contexts/TeamContext';
 
 const Roster: React.FC = () => {
+  const { currentTeam, currentRole, loading: teamLoading, error: teamError } = useTeam();
   const [players, setPlayers] = useState<Player[]>([]);
+  const [relationships, setRelationships] = useState<PlayerRelationship[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isRelationshipModalOpen, setIsRelationshipModalOpen] = useState(false);
   const [editingPlayer, setEditingPlayer] = useState<Player | null>(null);
+  const [selectedPlayerForRelationship, setSelectedPlayerForRelationship] = useState<string | null>(null);
 
   useEffect(() => {
-    loadPlayers();
-  }, []);
+    if (currentTeam) {
+      loadData();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentTeam]);
 
-  const loadPlayers = async () => {
+  const loadData = async () => {
+    if (!currentTeam) return;
+    
     try {
       setLoading(true);
-      const data = await ApiService.getTeamRoster('team1');
-      setPlayers(data);
+      const [playersData, relationshipsData] = await Promise.all([
+        ApiService.getTeamRoster(currentTeam.id),
+        ApiService.getTeamRelationships(currentTeam.id)
+      ]);
+      setPlayers(playersData);
+      setRelationships(relationshipsData);
       setError(null);
     } catch (err) {
-      setError('Failed to load roster');
-      console.error('Error loading players:', err);
+      setError('Failed to load roster data');
+      // eslint-disable-next-line no-console
+      console.error('Error loading roster data:', err);
     } finally {
       setLoading(false);
     }
@@ -63,7 +81,32 @@ const Roster: React.FC = () => {
   const handlePlayerSaved = () => {
     setIsModalOpen(false);
     setEditingPlayer(null);
-    loadPlayers();
+    loadData();
+  };
+
+  const handleAddRelationship = (playerUserId: string) => {
+    setSelectedPlayerForRelationship(playerUserId);
+    setIsRelationshipModalOpen(true);
+  };
+
+  const handleRelationshipSaved = () => {
+    setIsRelationshipModalOpen(false);
+    setSelectedPlayerForRelationship(null);
+    loadData();
+  };
+
+  const getPlayerRelationships = (playerUserId: string) => {
+    return relationships.filter(rel => rel.player_user_id === playerUserId);
+  };
+
+  const getRelationshipColor = (type: string) => {
+    switch (type) {
+      case 'parent': return 'bg-blue-100 text-blue-800';
+      case 'guardian': return 'bg-green-100 text-green-800';
+      case 'emergency_contact': return 'bg-red-100 text-red-800';
+      case 'other': return 'bg-gray-100 text-gray-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
   };
 
   const getPositionColor = (position: string) => {
@@ -81,10 +124,32 @@ const Roster: React.FC = () => {
     }
   };
 
-  if (loading) {
+  if (teamLoading || loading) {
     return (
       <div className="flex items-center justify-center py-20">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-tiko-blue"></div>
+      </div>
+    );
+  }
+
+  if (teamError) {
+    return (
+      <div className="space-y-6">
+        <h1 className="text-3xl font-bold text-gray-900">Team Roster</h1>
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
+          {teamError}
+        </div>
+      </div>
+    );
+  }
+
+  if (!currentTeam) {
+    return (
+      <div className="space-y-6">
+        <h1 className="text-3xl font-bold text-gray-900">Team Roster</h1>
+        <div className="bg-yellow-50 border border-yellow-200 text-yellow-700 px-4 py-3 rounded">
+          No team selected. Please select a team from the navigation.
+        </div>
       </div>
     );
   }
@@ -122,7 +187,7 @@ const Roster: React.FC = () => {
                     <th className="text-left py-3 px-4 font-semibold text-gray-900">Name</th>
                     <th className="text-left py-3 px-4 font-semibold text-gray-900">Position</th>
                     <th className="text-left py-3 px-4 font-semibold text-gray-900">Age</th>
-                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Emergency Contact</th>
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Family/Contacts</th>
                     <th className="text-left py-3 px-4 font-semibold text-gray-900">Actions</th>
                   </tr>
                 </thead>
@@ -131,6 +196,7 @@ const Roster: React.FC = () => {
                     const age = player.birth_date ? 
                       new Date().getFullYear() - new Date(player.birth_date).getFullYear() : 
                       null;
+                    const playerRelationships = player.user_id ? getPlayerRelationships(player.user_id) : [];
                     
                     return (
                       <tr key={player.id} className="border-b border-gray-100 hover:bg-gray-50">
@@ -157,23 +223,57 @@ const Roster: React.FC = () => {
                         <td className="py-3 px-4 text-gray-600">
                           {age ? `${age} years` : '-'}
                         </td>
-                        <td className="py-3 px-4 text-gray-600 text-sm">
-                          {player.emergency_contact || '-'}
+                        <td className="py-3 px-4">
+                          <div className="space-y-1">
+                            {playerRelationships.length > 0 ? (
+                              playerRelationships.map((relationship, index) => (
+                                <div key={relationship.id} className="flex items-center space-x-2">
+                                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRelationshipColor(relationship.relationship_type)}`}>
+                                    {relationship.relationship_type.replace('_', ' ')}
+                                  </span>
+                                  <span className="text-sm text-gray-700">
+                                    {relationship.caregiver_user?.name}
+                                  </span>
+                                  {relationship.is_primary && (
+                                    <span className="text-xs text-blue-600 font-medium">Primary</span>
+                                  )}
+                                </div>
+                              ))
+                            ) : (
+                              <div className="flex items-center space-x-2 text-gray-500">
+                                <UserGroupIcon className="w-4 h-4" />
+                                <span className="text-sm">No contacts linked</span>
+                              </div>
+                            )}
+                            {player.user_id && (currentRole === 'team_owner' || currentRole === 'coach') && (
+                              <button
+                                onClick={() => handleAddRelationship(player.user_id!)}
+                                className="text-xs text-tiko-blue hover:text-blue-600 flex items-center space-x-1 mt-1"
+                              >
+                                <LinkIcon className="w-3 h-3" />
+                                <span>Add Contact</span>
+                              </button>
+                            )}
+                          </div>
                         </td>
                         <td className="py-3 px-4">
                           <div className="flex items-center space-x-2">
                             <button
                               onClick={() => handleEditPlayer(player)}
                               className="p-1 text-gray-500 hover:text-tiko-blue transition-colors"
+                              title="Edit player"
                             >
                               <PencilIcon className="w-4 h-4" />
                             </button>
-                            <button
-                              onClick={() => handleDeletePlayer(player.id)}
-                              className="p-1 text-gray-500 hover:text-red-600 transition-colors"
-                            >
-                              <TrashIcon className="w-4 h-4" />
-                            </button>
+                            {(currentRole === 'team_owner' || currentRole === 'coach') && (
+                              <button
+                                onClick={() => handleDeletePlayer(player.id)}
+                                className="p-1 text-gray-500 hover:text-red-600 transition-colors"
+                                title="Delete player"
+                              >
+                                <TrashIcon className="w-4 h-4" />
+                              </button>
+                            )}
                           </div>
                         </td>
                       </tr>
@@ -254,6 +354,13 @@ const Roster: React.FC = () => {
         onClose={() => setIsModalOpen(false)}
         player={editingPlayer}
         onSaved={handlePlayerSaved}
+      />
+
+      <PlayerRelationshipModal
+        isOpen={isRelationshipModalOpen}
+        onClose={() => setIsRelationshipModalOpen(false)}
+        playerUserId={selectedPlayerForRelationship || undefined}
+        onSaved={handleRelationshipSaved}
       />
     </div>
   );
