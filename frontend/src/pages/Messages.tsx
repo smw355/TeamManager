@@ -4,9 +4,11 @@ import { Message } from '../types';
 import { useAuth } from '../contexts/LocalAuthContext';
 import { useWebSocket } from '../hooks/useWebSocket';
 import ApiService from '../services/api';
+import { useTeam } from '../contexts/TeamContext';
 
 const Messages: React.FC = () => {
   const { currentUser } = useAuth();
+  const { currentRole, currentTeam } = useTeam();
   const [selectedThread, setSelectedThread] = useState<string>('team');
   const [newMessage, setNewMessage] = useState('');
   const [allMessages, setAllMessages] = useState<Message[]>([]);
@@ -22,10 +24,10 @@ const Messages: React.FC = () => {
     startTyping,
     stopTyping
   } = useWebSocket({
-    teamId: 'team1',
+    teamId: currentTeam?.id || 'team1',
     userId: currentUser?.id || '',
     userName: currentUser?.name || '',
-    userRole: currentUser?.role || '',
+    userRole: currentRole || 'player',
   });
 
   // Load historical messages

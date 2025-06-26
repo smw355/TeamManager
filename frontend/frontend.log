@@ -9288,3 +9288,599 @@ TS2339: Property 'role' does not exist on type 'User'.
     30 |
     31 |   // Load historical messages
 
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 5:10:  'useTeam' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 5:10:  'useTeam' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/components/TikoModal.tsx:47:24
+TS2339: Property 'role' does not exist on type 'User'.
+    45 |       senderId: user.id,
+    46 |       senderName: user.name,
+  > 47 |       senderRole: user.role,
+       |                        ^^^^
+    48 |       content: newMessage,
+    49 |       timestamp: new Date().toISOString(),
+    50 |       type: 'ai',
+
+ERROR in src/components/TikoModal.tsx:62:14
+TS2339: Property 'role' does not exist on type 'User'.
+    60 |       const response = await ApiService.chatWithTiko(
+    61 |         currentMessage,
+  > 62 |         user.role,
+       |              ^^^^
+    63 |         {
+    64 |           user: user,
+    65 |           team: { name: 'Lightning Bolts', sport: 'Soccer' },
+
+ERROR in src/contexts/LocalAuthContext.tsx:84:50
+TS2345: Argument of type '{ email: string; password: string; name: string; }' is not assignable to parameter of type '{ email: string; password: string; name: string; role: string; }'.
+  Property 'role' is missing in type '{ email: string; password: string; name: string; }' but required in type '{ email: string; password: string; name: string; role: string; }'.
+    82 |       setLoading(true);
+    83 |       
+  > 84 |       const response = await ApiService.register({ email, password, name });
+       |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+    85 |       setCurrentUser(response.user);
+    86 |     } catch (error) {
+    87 |       const errorMessage = error instanceof Error ? error.message : 'Registration failed';
+
+ERROR in src/contexts/LocalAuthContext.tsx:102:40
+TS2345: Argument of type '{ role: TeamRole; id: string; email: string; name: string; avatar?: string | undefined; phone?: string | undefined; created_at: string; updated_at: string; }' is not assignable to parameter of type 'SetStateAction<User | null>'.
+  Object literal may only specify known properties, and 'role' does not exist in type 'User | ((prevState: User | null) => User | null)'.
+    100 |   const setUserRole = (role: UserRole) => {
+    101 |     if (currentUser) {
+  > 102 |       setCurrentUser({ ...currentUser, role });
+        |                                        ^^^^
+    103 |     }
+    104 |   };
+    105 |
+
+ERROR in src/pages/Messages.tsx:28:28
+TS2339: Property 'role' does not exist on type 'User'.
+    26 |     userId: currentUser?.id || '',
+    27 |     userName: currentUser?.name || '',
+  > 28 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    29 |   });
+    30 |
+    31 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:11:  'currentRole' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:11:  'currentRole' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/components/TikoModal.tsx:48:24
+TS2339: Property 'role' does not exist on type 'User'.
+    46 |       senderId: user.id,
+    47 |       senderName: user.name,
+  > 48 |       senderRole: user.role,
+       |                        ^^^^
+    49 |       content: newMessage,
+    50 |       timestamp: new Date().toISOString(),
+    51 |       type: 'ai',
+
+ERROR in src/components/TikoModal.tsx:63:14
+TS2339: Property 'role' does not exist on type 'User'.
+    61 |       const response = await ApiService.chatWithTiko(
+    62 |         currentMessage,
+  > 63 |         user.role,
+       |              ^^^^
+    64 |         {
+    65 |           user: user,
+    66 |           team: { name: 'Lightning Bolts', sport: 'Soccer' },
+
+ERROR in src/contexts/LocalAuthContext.tsx:84:50
+TS2345: Argument of type '{ email: string; password: string; name: string; }' is not assignable to parameter of type '{ email: string; password: string; name: string; role: string; }'.
+  Property 'role' is missing in type '{ email: string; password: string; name: string; }' but required in type '{ email: string; password: string; name: string; role: string; }'.
+    82 |       setLoading(true);
+    83 |       
+  > 84 |       const response = await ApiService.register({ email, password, name });
+       |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+    85 |       setCurrentUser(response.user);
+    86 |     } catch (error) {
+    87 |       const errorMessage = error instanceof Error ? error.message : 'Registration failed';
+
+ERROR in src/contexts/LocalAuthContext.tsx:102:40
+TS2345: Argument of type '{ role: TeamRole; id: string; email: string; name: string; avatar?: string | undefined; phone?: string | undefined; created_at: string; updated_at: string; }' is not assignable to parameter of type 'SetStateAction<User | null>'.
+  Object literal may only specify known properties, and 'role' does not exist in type 'User | ((prevState: User | null) => User | null)'.
+    100 |   const setUserRole = (role: UserRole) => {
+    101 |     if (currentUser) {
+  > 102 |       setCurrentUser({ ...currentUser, role });
+        |                                        ^^^^
+    103 |     }
+    104 |   };
+    105 |
+
+ERROR in src/pages/Messages.tsx:28:28
+TS2339: Property 'role' does not exist on type 'User'.
+    26 |     userId: currentUser?.id || '',
+    27 |     userName: currentUser?.name || '',
+  > 28 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    29 |   });
+    30 |
+    31 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/components/TikoModal.tsx:63:14
+TS2339: Property 'role' does not exist on type 'User'.
+    61 |       const response = await ApiService.chatWithTiko(
+    62 |         currentMessage,
+  > 63 |         user.role,
+       |              ^^^^
+    64 |         {
+    65 |           user: user,
+    66 |           team: { name: 'Lightning Bolts', sport: 'Soccer' },
+
+ERROR in src/contexts/LocalAuthContext.tsx:84:50
+TS2345: Argument of type '{ email: string; password: string; name: string; }' is not assignable to parameter of type '{ email: string; password: string; name: string; role: string; }'.
+  Property 'role' is missing in type '{ email: string; password: string; name: string; }' but required in type '{ email: string; password: string; name: string; role: string; }'.
+    82 |       setLoading(true);
+    83 |       
+  > 84 |       const response = await ApiService.register({ email, password, name });
+       |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+    85 |       setCurrentUser(response.user);
+    86 |     } catch (error) {
+    87 |       const errorMessage = error instanceof Error ? error.message : 'Registration failed';
+
+ERROR in src/contexts/LocalAuthContext.tsx:102:40
+TS2345: Argument of type '{ role: TeamRole; id: string; email: string; name: string; avatar?: string | undefined; phone?: string | undefined; created_at: string; updated_at: string; }' is not assignable to parameter of type 'SetStateAction<User | null>'.
+  Object literal may only specify known properties, and 'role' does not exist in type 'User | ((prevState: User | null) => User | null)'.
+    100 |   const setUserRole = (role: UserRole) => {
+    101 |     if (currentUser) {
+  > 102 |       setCurrentUser({ ...currentUser, role });
+        |                                        ^^^^
+    103 |     }
+    104 |   };
+    105 |
+
+ERROR in src/pages/Messages.tsx:28:28
+TS2339: Property 'role' does not exist on type 'User'.
+    26 |     userId: currentUser?.id || '',
+    27 |     userName: currentUser?.name || '',
+  > 28 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    29 |   });
+    30 |
+    31 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/contexts/LocalAuthContext.tsx:84:50
+TS2345: Argument of type '{ email: string; password: string; name: string; }' is not assignable to parameter of type '{ email: string; password: string; name: string; role: string; }'.
+  Property 'role' is missing in type '{ email: string; password: string; name: string; }' but required in type '{ email: string; password: string; name: string; role: string; }'.
+    82 |       setLoading(true);
+    83 |       
+  > 84 |       const response = await ApiService.register({ email, password, name });
+       |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+    85 |       setCurrentUser(response.user);
+    86 |     } catch (error) {
+    87 |       const errorMessage = error instanceof Error ? error.message : 'Registration failed';
+
+ERROR in src/contexts/LocalAuthContext.tsx:102:40
+TS2345: Argument of type '{ role: TeamRole; id: string; email: string; name: string; avatar?: string | undefined; phone?: string | undefined; created_at: string; updated_at: string; }' is not assignable to parameter of type 'SetStateAction<User | null>'.
+  Object literal may only specify known properties, and 'role' does not exist in type 'User | ((prevState: User | null) => User | null)'.
+    100 |   const setUserRole = (role: UserRole) => {
+    101 |     if (currentUser) {
+  > 102 |       setCurrentUser({ ...currentUser, role });
+        |                                        ^^^^
+    103 |     }
+    104 |   };
+    105 |
+
+ERROR in src/pages/Messages.tsx:28:28
+TS2339: Property 'role' does not exist on type 'User'.
+    26 |     userId: currentUser?.id || '',
+    27 |     userName: currentUser?.name || '',
+  > 28 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    29 |   });
+    30 |
+    31 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+ERROR in src/contexts/LocalAuthContext.tsx:102:40
+TS2345: Argument of type '{ role: TeamRole; id: string; email: string; name: string; avatar?: string | undefined; phone?: string | undefined; created_at: string; updated_at: string; }' is not assignable to parameter of type 'SetStateAction<User | null>'.
+  Object literal may only specify known properties, and 'role' does not exist in type 'User | ((prevState: User | null) => User | null)'.
+    100 |   const setUserRole = (role: UserRole) => {
+    101 |     if (currentUser) {
+  > 102 |       setCurrentUser({ ...currentUser, role });
+        |                                        ^^^^
+    103 |     }
+    104 |   };
+    105 |
+
+ERROR in src/pages/Messages.tsx:28:28
+TS2339: Property 'role' does not exist on type 'User'.
+    26 |     userId: currentUser?.id || '',
+    27 |     userName: currentUser?.name || '',
+  > 28 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    29 |   });
+    30 |
+    31 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/contexts/LocalAuthContext.tsx:110:5
+TS18004: No value exists in scope for the shorthand property 'setUserRole'. Either declare one or provide an initializer.
+    108 |     register,
+    109 |     logout,
+  > 110 |     setUserRole,
+        |     ^^^^^^^^^^^
+    111 |   };
+    112 |
+    113 |   return (
+
+ERROR in src/pages/Messages.tsx:28:28
+TS2339: Property 'role' does not exist on type 'User'.
+    26 |     userId: currentUser?.id || '',
+    27 |     userName: currentUser?.name || '',
+  > 28 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    29 |   });
+    30 |
+    31 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+ERROR in src/contexts/LocalAuthContext.tsx:109:5
+TS18004: No value exists in scope for the shorthand property 'setUserRole'. Either declare one or provide an initializer.
+    107 |     register,
+    108 |     logout,
+  > 109 |     setUserRole,
+        |     ^^^^^^^^^^^
+    110 |   };
+    111 |
+    112 |   return (
+
+ERROR in src/contexts/LocalAuthContext.tsx:109:5
+TS2322: Type '{ currentUser: User | null; loading: boolean; error: string | null; login: (email: string, password: string) => Promise<void>; register: (email: string, password: string, name: string) => Promise<...>; logout: () => void; setUserRole: any; }' is not assignable to type 'AuthContextType'.
+  Object literal may only specify known properties, and 'setUserRole' does not exist in type 'AuthContextType'.
+    107 |     register,
+    108 |     logout,
+  > 109 |     setUserRole,
+        |     ^^^^^^^^^^^
+    110 |   };
+    111 |
+    112 |   return (
+
+ERROR in src/pages/Messages.tsx:28:28
+TS2339: Property 'role' does not exist on type 'User'.
+    26 |     userId: currentUser?.id || '',
+    27 |     userName: currentUser?.name || '',
+  > 28 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    29 |   });
+    30 |
+    31 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Messages.tsx:28:28
+TS2339: Property 'role' does not exist on type 'User'.
+    26 |     userId: currentUser?.id || '',
+    27 |     userName: currentUser?.name || '',
+  > 28 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    29 |   });
+    30 |
+    31 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Messages.tsx
+  Line 7:10:  'useTeam' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Messages.tsx
+  Line 7:10:  'useTeam' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Messages.tsx:29:28
+TS2339: Property 'role' does not exist on type 'User'.
+    27 |     userId: currentUser?.id || '',
+    28 |     userName: currentUser?.name || '',
+  > 29 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    30 |   });
+    31 |
+    32 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Messages.tsx
+  Line 11:11:  'currentRole' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 11:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Messages.tsx
+  Line 11:11:  'currentRole' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  Line 11:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+ERROR in src/pages/Messages.tsx:30:28
+TS2339: Property 'role' does not exist on type 'User'.
+    28 |     userId: currentUser?.id || '',
+    29 |     userName: currentUser?.name || '',
+  > 30 |     userRole: currentUser?.role || '',
+       |                            ^^^^
+    31 |   });
+    32 |
+    33 |   // Load historical messages
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Messages.tsx
+  Line 11:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/pages/Messages.tsx
+  Line 11:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.

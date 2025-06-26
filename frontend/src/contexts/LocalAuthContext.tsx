@@ -7,9 +7,8 @@ interface AuthContextType {
   loading: boolean;
   error: string | null;
   login: (email: string, password: string) => Promise<void>;
-  register: (email: string, password: string, name: string, role: UserRole) => Promise<void>;
+  register: (email: string, password: string, name: string) => Promise<void>;
   logout: () => void;
-  setUserRole: (role: UserRole) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -97,11 +96,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     setCurrentUser(null);
   };
 
-  const setUserRole = (role: UserRole) => {
-    if (currentUser) {
-      setCurrentUser({ ...currentUser, role });
-    }
-  };
+  // setUserRole is no longer needed - users don't have global roles
+  // Roles are now team-specific and managed by TeamContext
 
   const value: AuthContextType = {
     currentUser,
@@ -110,7 +106,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     login,
     register,
     logout,
-    setUserRole,
   };
 
   return (

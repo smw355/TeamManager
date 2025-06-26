@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { XMarkIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline';
 import { User, Message } from '../types';
 import ApiService from '../services/api';
+import { useTeam } from '../contexts/TeamContext';
 
 interface TikoModalProps {
   isOpen: boolean;
@@ -10,6 +11,7 @@ interface TikoModalProps {
 }
 
 const TikoModal: React.FC<TikoModalProps> = ({ isOpen, onClose, user }) => {
+  const { currentRole, currentTeam } = useTeam();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -43,7 +45,7 @@ const TikoModal: React.FC<TikoModalProps> = ({ isOpen, onClose, user }) => {
       teamId: undefined,
       senderId: user.id,
       senderName: user.name,
-      senderRole: user.role,
+      senderRole: currentRole || 'player',
       content: newMessage,
       timestamp: new Date().toISOString(),
       type: 'ai',
@@ -58,7 +60,7 @@ const TikoModal: React.FC<TikoModalProps> = ({ isOpen, onClose, user }) => {
     try {
       const response = await ApiService.chatWithTiko(
         currentMessage,
-        user.role,
+        currentRole || 'player',
         {
           user: user,
           team: { name: 'Lightning Bolts', sport: 'Soccer' },
