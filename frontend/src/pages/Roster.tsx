@@ -65,6 +65,8 @@ const Roster: React.FC = () => {
   };
 
   const handleDeletePlayer = async (playerId: string) => {
+    if (!currentTeam) return;
+    
     if (!window.confirm('Are you sure you want to remove this player from the roster?')) {
       return;
     }
@@ -74,6 +76,7 @@ const Roster: React.FC = () => {
       await loadData();
     } catch (err) {
       setError('Failed to delete player');
+      // eslint-disable-next-line no-console
       console.error('Error deleting player:', err);
     }
   };

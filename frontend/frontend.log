@@ -10657,3 +10657,37 @@ TS18047: 'currentTeam' is possibly 'null'.
     75 |     } catch (err) {
     76 |       setError('Failed to delete player');
 
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/PlayerRelationshipModal.tsx
+  Line 2:42:  'PlusIcon' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/components/TikoModal.tsx
+  Line 14:24:  'currentTeam' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/LocalAuthContext.tsx
+  Line 2:16:  'UserRole' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/contexts/TeamContext.tsx
+  Line 2:46:  'UserTeamMembership' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
